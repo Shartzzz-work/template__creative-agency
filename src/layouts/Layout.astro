@@ -1,0 +1,37 @@
+---
+import Header from './header/header.astro';
+import Footer from './footer/footer.astro';
+
+// import { getCollection } from 'astro:content';
+import Popup from '../components/popup/popup.astro';
+// const pagesEntries = await getCollection('pages');
+
+// let pathName = Astro.url.pathname;
+
+// if (pathName === '/') {
+//   pathName = '/index';
+// }
+
+// const pageData = pagesEntries.find((i) => `/${i.id}` === pathName);
+
+const { title, description, keywords } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+		<meta name="keywords" content={keywords}>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+    <Popup />
+  </body>
+</html>

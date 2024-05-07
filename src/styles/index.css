@@ -1,0 +1,6 @@
+@import '../_css/general.css';
+@import '../components/hero/hero.css';
+@import '../components/numbers/numbers.css';
+@import '../components/services/services.css';
+@import '../components/get-start/get-start.css';
+/* @import './_blocks/popup/popup.css'; */

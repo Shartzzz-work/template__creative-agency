@@ -1,0 +1,76 @@
+---
+import { Image } from 'astro:assets';
+import imgTeam from './img/team1.jpg';
+
+const data = [
+  {
+    title: 'Gabriella Kuertova',
+    img: imgTeam,
+    skills: ['Design', 'UI/UX'],
+  },
+  {
+    title: 'Gabriella Kuertova',
+    img: imgTeam,
+    skills: ['Design', 'UI/UX'],
+  },
+  {
+    title: 'Gabriella Kuertova',
+    img: imgTeam,
+    skills: ['Design', 'UI/UX'],
+  },
+  {
+    title: 'Gabriella Kuertova',
+    img: imgTeam,
+    skills: ['Design', 'UI/UX'],
+  },
+  {
+    title: 'Gabriella Kuertova',
+    img: imgTeam,
+    skills: ['Design', 'UI/UX'],
+  },
+  {
+    title: 'Gabriella Kuertova',
+    img: imgTeam,
+    skills: ['Design', 'UI/UX'],
+  },
+  {
+    title: 'Gabriella Kuertova',
+    img: imgTeam,
+    skills: ['Design', 'UI/UX'],
+  },
+  {
+    title: 'Gabriella Kuertova',
+    img: imgTeam,
+    skills: ['Design', 'UI/UX'],
+  },
+  {
+    title: 'Gabriella Kuertova',
+    img: imgTeam,
+    skills: ['Design', 'UI/UX'],
+  },
+];
+---
+
+<section id="teamList">
+  {
+    data.map((i) => (
+      <div class="team-item">
+        <Image
+          src={i.img}
+          alt="team"
+          class="team-item__img"
+          widths={[240, 540, 720, i.img.width]}
+          sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${i.img.width}px`}
+        />
+        <div class="team-item__data">
+          <h2>{i.title}</h2>
+          <ul class="team-item__skills">
+            {i.skills.map((skill) => (
+              <li class="tag">{skill}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    ))
+  }
+</section>

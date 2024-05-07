@@ -1,0 +1,92 @@
+---
+import { Image } from 'astro:assets';
+import img1 from './img/project1.jpg';
+import img2 from './img/project2.jpg';
+import img3 from './img/project3.jpg';
+import img4 from './img/project4.jpg';
+import img5 from './img/project5.jpg';
+import img6 from './img/project6.jpg';
+import img7 from './img/project7.jpg';
+import img8 from './img/project8.jpg';
+
+const data = [
+  {
+    title: 'Projectdfgdfgsdf gdfgdfg №1',
+    img: img1,
+    tags: ['Design', 'Seo', "lsdkfal"],
+    url: '#',
+  },
+  {
+    title: 'Project №1',
+    img: img2,
+    tags: ['Design'],
+    url: '#',
+  },
+  {
+    title: 'Project №1',
+    img: img3,
+    tags: ['Design'],
+    url: '#',
+  },
+  {
+    title: 'Project №1',
+    img: img4,
+    tags: ['Design'],
+    url: '#',
+  },
+  {
+    title: 'Project №1',
+    img: img5,
+    tags: ['Design'],
+    url: '#',
+  },
+  {
+    title: 'Project №1',
+    img: img6,
+    tags: ['Design'],
+    url: '#',
+  },
+  {
+    title: 'Project №1',
+    img: img7,
+    tags: ['Design'],
+    url: '#',
+  },
+  {
+    title: 'Project №1',
+    img: img8,
+    tags: ['Design'],
+    url: '#',
+  },
+];
+---
+
+<section id="projectsList">
+  {
+    data.map((i) => (
+      <article class="projects-item">
+        <Image
+          src={i.img}
+          alt="project"
+          class="projects-item__img"
+          widths={[240, 540, 720, i.img.width]}
+          sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${i.img.width}px`}
+          alt="description image."
+        />
+        <div class="projects-item__data">
+          <h1>{i.title}</h1>
+          <ul class="projects-item__tags">
+            {i.tags.map((tag) => (
+              <li class="tag">{tag}</li>
+            ))}
+          </ul>
+          <a href={i.url} title="project link">
+            <svg class="arrow">
+              <use xlink:href="./sprites/sprite-main.svg#iconArrow" />
+            </svg>
+          </a>
+        </div>
+      </article>
+    ))
+  }
+</section>

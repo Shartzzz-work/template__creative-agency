@@ -1,0 +1,30 @@
+#getStart {
+  padding: 0 20px;
+  margin: 60px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+
+  & > h2 {
+    font-size: clamp(3rem, 9vw, 7rem);
+    text-transform: uppercase;
+    flex: 3;
+  }
+
+  & > div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & [name='getOrder'] {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--c-accent);
+    border: none;
+    cursor: pointer;
+  }
+}

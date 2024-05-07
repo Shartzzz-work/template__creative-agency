@@ -1,0 +1,32 @@
+---
+import { getEntry } from 'astro:content';
+
+const metaData = await getEntry('pages', 'projects');
+
+import GetStart from '../components/get-start/get-start.astro';
+import ProjectsList from '../components/projects-list/projects-list.astro';
+import Layout from '../layouts/Layout.astro';
+import '../styles/projects.css';
+---
+
+<Layout
+  title={metaData.data.metatags.title}
+  description={metaData.data.metatags.description}
+  keywords={metaData.data.metatags.keywords}
+>
+  <main>
+    <h1 class="project-title">
+      People don’t buy what you do, they buy why you do it.
+    </h1>
+
+    <ul class="tag-list">
+      <li class="tag active">Design</li>
+      <li class="tag">Development</li>
+      <li class="tag">Digital Marketing</li>
+      <li class="tag">SEO</li>
+    </ul>
+    <ProjectsList />
+    <GetStart />
+  </main>
+  <script src="../scripts/projects.js"></script>
+</Layout>

@@ -1,0 +1,28 @@
+---
+import { getEntry } from 'astro:content';
+
+const heroBlock = await getEntry('components', 'hero');
+const data = heroBlock.data;
+
+import { Image } from 'astro:assets';
+import heroImg from './img/hero-video.jpg';
+
+---
+
+<section id="hero">
+  <h1 class="hero-title">{data.title}</h1>
+  <div class="hero-data">
+    <div class="hero-video">
+      <span class="hero-video__play"></span>
+      <Image 
+      src={heroImg} 
+      alt="hero image" 
+      densities={[1.5, 2]}
+      class="hero-video__img" />
+    </div>
+    <p class="hero-description">{data.description}</p>
+  </div>
+</section>
+<ul class="tag-list out">
+  {data.tags.map((tag) => <li class="tag">{tag}</li>)}
+</ul>

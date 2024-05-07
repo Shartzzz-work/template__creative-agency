@@ -1,0 +1,25 @@
+{
+  "item_1": {
+    "iconName": "iconArrow",
+    "text": "We are an Creative agency, based in New York. Vision Every company is performing best online. Mission Helping businesses to find the perfect and most succesful strategy, to be online.\n",
+    "button": {
+      "text": "Get Started!",
+      "iconName": "iconStar"
+    }
+  },
+  "item_2": {
+    "title": "What makes us special",
+    "text": "Is to deliver awesome for our clients. By awesome, this should be a tangible impact on their business. We exist as a partner to businesses, crafting strategies that are aligned with our client’s business goals. In every campaign and project, the results we aim to achieve are clear, the measures are clear and most importantly we are transparent throughout.\n"
+  },
+  "item_3": {
+    "title": "Our purpose",
+    "text": "Is to deliver awesome for our clients. By awesome, this should be a tangible impact on their business. We exist as a partner to businesses, crafting strategies that are aligned with our client’s business goals. In every campaign and project, the results we aim to achieve are clear, the measures are clear and most importantly we are transparent throughout.\n"
+  },
+  "list": [
+    {
+      "title": "30k \\<sup>+\\</sup>\n",
+      "body": "Project Completed"
+    }
+  ],
+  "_template": "numbers"
+}

@@ -1,0 +1,145 @@
+#services {
+  display: flex;
+  flex-direction: column;
+  background: var(--c-dark);
+  color: var(--c-text-light);
+  padding: 60px;
+  border-radius: 50px;
+
+  & .ghost {
+    opacity: 50%;
+  }
+
+  & .tag, & .tag-list {
+    --c-color: var(--c-white);
+  }
+
+  & > p {
+    margin-left: auto;
+    max-width: 400px;
+    text-align: right;
+    padding: 40px 0;
+  }
+
+  @media screen and (width <= 768px) {
+    border-radius: 20px;
+    padding: 20px;
+  }
+}
+
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  & > div {
+    flex: 3;
+  }
+
+  & h2 {
+    text-transform: uppercase;
+    font-size: clamp(3rem, 8vw, 5rem);
+    line-height: 1;
+    margin-bottom: 20px;
+
+    &::after {
+      content: '.';
+      color: var(--c-accent);
+    }
+  }
+
+  & p {
+    max-width: 600px;
+  }
+
+  .tags-cloud {
+    flex: 1;
+    justify-content: flex-end;
+    align-content: flex-end;
+    min-width: 240px;
+  }
+}
+
+.accordion-list {
+  padding: 60px 0;
+}
+
+.accordion-item {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--c-white);
+
+  &:first-child {
+    border-top: 1px solid var(--c-white);
+  }
+
+  &[open] {
+    & .accordion-title {
+      opacity: 1;
+      &::after {
+        content: '';
+        background: var(--c-accent);
+        width: 0.25em;
+        height: 0.25em;
+        border-radius: 50%;
+      }
+    }
+
+    & .arrow {
+      fill: var(--c-accent);
+      opacity: 1;
+      transform: rotate(0);
+    }
+  }
+}
+
+.accordion-title__container {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  & .arrow {
+    height: 4rem;
+    width: 4rem;
+    fill: var(--c-white);
+    opacity: 50%;
+    transform: rotate(-90deg);
+    transition: all 200ms;
+  }
+}
+
+.accordion-title {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  line-height: 1;
+  opacity: 50%;
+}
+
+.accordion-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 40px;
+
+  & .tags-cloud {
+    flex: 1;
+    min-width: 300px;
+    
+    @media screen and (width <= 768px) {
+      min-width: 100%;
+    }
+  }
+
+  & p {
+    flex: 3;
+    min-width: 500px;
+
+    @media screen and (width <= 768px) {
+      min-width: 100%;
+    }
+  }
+}

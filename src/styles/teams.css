@@ -1,0 +1,17 @@
+@import '../_css/general.css';
+@import '../components/teams-list/teams-list.css';
+@import '../components/get-start/get-start.css';
+
+.teams-title {
+  font-size: 6rem;
+  text-transform: uppercase;
+  padding: 40px 20px 60px;
+  line-height: 1;
+}
+
+#getStart {
+  background: var(--c-dark);
+  color: var(--c-text-light);
+  border-radius: 30px;
+  margin: 60px 20px;
+}

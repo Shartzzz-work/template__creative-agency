@@ -1,0 +1,77 @@
+#numbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  padding: 60px 20px;
+}
+
+.numbers-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-width: 300px;
+
+  & .arrow {
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    border: 2px solid var(--c-accent);
+    padding: 10px;
+    fill: var(--c-accent);
+  }
+
+  & h2 {
+    font-size: 2rem;
+    color: var(--c-accent);
+  }
+
+  [name='getOrder'] {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--c-accent);
+    width: fit-content;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    text-align: left;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 0px 6px var(--c-accent),
+      inset 0px 0px 0px 8px var(--c-white);
+
+    & svg {
+      width: 50px;
+      height: 50px;
+      align-self: start;
+    }
+  }
+}
+
+.numbers-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.numbers-list__item {
+  display: flex;
+  flex-direction: column;
+
+  & strong {
+    font-size: 4rem;
+  }
+
+  & sup,
+  & span {
+    color: var(--c-accent);
+  }
+
+  & span {
+    font-size: 1.2em;
+  }
+}

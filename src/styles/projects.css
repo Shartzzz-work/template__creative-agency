@@ -1,0 +1,29 @@
+@import '../_css/general.css';
+@import '../components/projects-list/projects-list.css';
+@import '../components/get-start/get-start.css';
+
+.project-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  text-transform: uppercase;
+  padding: 40px 20px 60px;
+  line-height: 1;
+}
+
+#getStart {
+  background: var(--c-dark);
+  color: var(--c-text-light);
+  border-radius: 30px;
+  margin: 60px 20px;
+}
+
+.tag-list {
+  padding: 0 20px;
+}
+
+.tag {
+  &.active,
+  &:hover {
+    --c-color: var(--c-accent);
+    color: var(--c-accent);
+  }
+}

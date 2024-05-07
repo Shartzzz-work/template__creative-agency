@@ -1,0 +1,26 @@
+---
+import { getEntry } from 'astro:content';
+
+const metaData = await getEntry('pages', 'index');
+
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/hero/hero.astro';
+import Numbers from '../components/numbers/numbers.astro';
+import Services from '../components/services/services.astro';
+import GetStart from '../components/get-start/get-start.astro';
+import '../styles/index.css';
+---
+
+<Layout
+  title={metaData.data.metatags.title}
+  description={metaData.data.metatags.description}
+  keywords={metaData.data.metatags.keywords}
+>
+  <main>
+    <Hero />
+    <Numbers />
+    <Services />
+    <GetStart />
+  </main>
+  <script src="../scripts/index.js"></script>
+</Layout>
